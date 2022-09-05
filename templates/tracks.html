@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best sellers</title>
+</head>
+<body>
+    {% block content %}
+    <h1>List of bestseller tracks</h1>
+    <br>
+    <h2>Title<span style="float:right">Total&nbsp;</span></h2>
+    <hr>
+    {% for track in tracks %}
+        <div>
+            <p>{{ track.Name }}<span style="float:right">{{ track.Total }}&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+        </div>
+        <hr>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>
