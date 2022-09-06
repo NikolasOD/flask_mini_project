@@ -7,9 +7,9 @@
 <body>
     <div>
       <strong>Flask Library</strong>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#">Book's List</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="#">Add book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('list_books') }}">Book's List</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="{{ url_for('create_book') }}">Add book</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     <hr>
     {% block content %}{% endblock %}

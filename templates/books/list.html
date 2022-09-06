@@ -8,7 +8,9 @@
     <h1>List of books</h1>
     {% for book in books %}
         <p>
-            <a href="/books/details/{{ book.id }}">{{ book.title }}</a><br>{{ book.created }}
+            <a href="{{ url_for('detail_book', book_id=book.id) }}">{{ book.title }}</a>
+            <br>
+            {{ book.created }}
         </p>
         <hr>
     {% endfor %}
